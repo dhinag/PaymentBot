@@ -1,0 +1,85 @@
+﻿{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Bot Framework Sticker Pack",
+      "weight": "bolder",
+      "size": "large"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://ih1.redbubble.net/image.633364125.7087/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+              "size": "large",
+              "style": "person", 
+              "height":  "300px"
+            }
+          ]
+        }       
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "This sticker pack is for anyone who is a bot framework nerd.",
+      "wrap": true,
+      "size":  "medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "4.2 ★★★★☆ (93) · $10",
+      "isSubtle": true,
+       "weight":  "bolder",
+      "spacing": "None"
+    }
+  ],
+  "actions": [   
+    {
+      "type": "Action.ShowCard",
+      "title": "Buy",
+      "card": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "Input.Text",
+            "id": "CreditCardNumber",
+            "isMultiline": false,
+            "placeholder": "Credit Card Number"
+          },
+          {
+            "type": "Input.Text",
+            "id": "ExpiryYear",
+            "isMultiline": false,
+            "placeholder": "Expiry Year"
+          },
+          {
+            "type": "Input.Text",
+            "id": "ExpiryMonth",
+            "isMultiline": false,
+            "placeholder": "Expiry Month"
+          },
+          {
+            "type": "Input.Text",
+            "id": "CVC",
+            "isMultiline": false,
+            "placeholder": "CVC"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Pay"
+          }
+        ]
+      }
+    }
+  ]
+}
